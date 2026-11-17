@@ -1,0 +1,347 @@
+<!doctype html>
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Sushi Point · Оферта</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#F4F1EA; --fg:#141414; --muted:#5B5F5A; --green:#1E6B3C; --salmon:#E8572A; --card:#FFFFFF; --line:#D9D4C7;
+  --display:"Manrope", "Inter", Arial, sans-serif; --text:"Inter", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#0F1A13; --fg:#F2F2EE; --muted:#A9B5AC; --green:#5CC487; --salmon:#F07A52; --card:#17241B; --line:#2A3A2E; color-scheme:dark }
+}
+:root[data-theme="dark"]{ --bg:#0F1A13; --fg:#F2F2EE; --muted:#A9B5AC; --green:#5CC487; --salmon:#F07A52; --card:#17241B; --line:#2A3A2E; color-scheme:dark }
+*{box-sizing:border-box}
+html,body{margin:0; overflow-x:hidden}
+main,section,.hero{min-width:0}
+body{background:var(--bg); color:var(--fg); font:16px/1.55 var(--text); padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px)}
+img{max-width:100%; display:block}
+.wrap{max-width:1120px; margin:0 auto}
+section{padding:72px 0}
+.eyebrow{font:600 13px/1 var(--text); letter-spacing:.16em; text-transform:uppercase; color:var(--green); display:inline-flex; align-items:center; gap:12px}
+.eyebrow:before{content:""; width:28px; height:2px; background:currentColor; border-radius:2px}
+h1,h2,h3{font-family:var(--display); letter-spacing:-.02em; text-wrap:balance; margin:0}
+h1{font-size:clamp(40px,7vw,84px); line-height:1.02; font-weight:800}
+h2{font-size:clamp(30px,4.2vw,52px); line-height:1.08; font-weight:800; margin-top:14px}
+h3{font-size:22px; font-weight:800; line-height:1.2}
+p{margin:0}
+.lead{font-size:clamp(18px,2vw,21px); color:var(--muted); max-width:640px; margin-top:18px}
+.card{background:var(--card); border:1px solid var(--line); border-radius:18px; padding:28px}
+.muted{color:var(--muted)}
+.num{font-family:var(--display); font-weight:800; font-size:clamp(40px,6vw,68px); line-height:1; font-variant-numeric:tabular-nums}
+
+/* Hero */
+.hero{padding:40px 0 0}
+.hero{display:block}
+.hero-img{margin-top:40px; width:100%; overflow:hidden}
+.hero-img img{width:100%; height:auto; display:block;
+  -webkit-mask-image:radial-gradient(ellipse 58% 62% at 62% 50%, #000 55%, transparent 100%);
+          mask-image:radial-gradient(ellipse 58% 62% at 62% 50%, #000 55%, transparent 100%)}
+.hero-meta{display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; font-size:14px; color:var(--muted)}
+.hero-meta span{border:1px solid var(--line); background:var(--card); border-radius:99px; padding:8px 16px}
+.hero-meta b{color:var(--fg)}
+
+/* Facts */
+.facts{display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); margin-top:36px}
+.fact{border-top:3px solid var(--green); padding-top:16px}
+.fact small{display:block; color:var(--muted); margin-top:8px; font-size:14px}
+
+/* Two columns: works / missing */
+.split{display:grid; gap:20px; grid-template-columns:1fr 1fr; margin-top:36px}
+@media (max-width:720px){.split{grid-template-columns:1fr}}
+ul.clean{margin:14px 0 0; padding:0; list-style:none; display:grid; gap:12px}
+ul.clean li{padding-left:22px; position:relative}
+ul.clean li:before{content:""; position:absolute; left:0; top:.6em; width:9px; height:9px; border-radius:50%; background:var(--green)}
+ul.clean.miss li:before{background:var(--salmon)}
+
+/* Audiences */
+.aud{display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); margin-top:36px}
+.aud .role{font:600 12px/1 var(--text); letter-spacing:.12em; text-transform:uppercase; color:var(--salmon)}
+
+/* Funnel */
+.funnel{margin-top:36px; display:grid; gap:12px}
+.stage{display:grid; grid-template-columns:minmax(150px,240px) 1fr auto; gap:18px; align-items:center; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 22px}
+@media (max-width:620px){.stage{grid-template-columns:1fr}}
+.bar{height:12px; border-radius:99px; background:var(--line); overflow:hidden}
+.bar i{display:block; height:100%; background:linear-gradient(90deg,var(--green),var(--salmon)); border-radius:99px}
+.stage .what{color:var(--muted); font-size:14px}
+
+/* Channels: budget bars */
+.chan{margin-top:36px; display:grid; gap:18px}
+.chan-row{display:grid; grid-template-columns:minmax(160px,220px) 1fr auto; gap:16px; align-items:center}
+@media (max-width:620px){.chan-row{grid-template-columns:1fr}}
+.chan-row .track{height:44px; background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden}
+.chan-row .track i{display:block; height:100%; background:var(--green)}
+.chan-row .amt{font-family:var(--display); font-weight:800; font-variant-numeric:tabular-nums; font-size:20px}
+
+/* Concepts */
+.concepts{display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); margin-top:36px}
+.concept{background:var(--card); border:1px solid var(--line); border-radius:18px; padding:28px; display:flex; flex-direction:column; gap:14px}
+.concept .tag{font:600 12px/1 var(--text); letter-spacing:.12em; text-transform:uppercase; color:var(--green)}
+
+/* Plan */
+.plan{display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); margin-top:36px}
+.plan .card{border-top:4px solid var(--green)}
+
+/* Packages */
+.pkgs{display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); margin-top:36px; align-items:stretch}
+.pkg{display:flex; flex-direction:column; gap:14px}
+.pkg.hot{background:var(--salmon); color:#141414; border-color:var(--salmon)}
+.pkg.hot .muted{color:#3A2A22}
+.pkg .price{font-family:var(--display); font-weight:800; font-size:56px; line-height:1; font-variant-numeric:tabular-nums}
+.pkg .per{font-size:15px; color:var(--muted)}
+.pkg.hot .per{color:#3A2A22}
+.pkg ul{margin:6px 0 0; padding:0; list-style:none; display:grid; gap:8px; font-size:15px}
+.pkg ul li:before{content:"— "; color:var(--salmon)}
+.pkg.hot ul li:before{color:#141414}
+.note{margin-top:22px; color:var(--muted); font-size:14px}
+
+/* Pin / contact */
+.close{display:grid; gap:28px; grid-template-columns:1.2fr .8fr; align-items:center; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:40px}
+@media (max-width:720px){.close{grid-template-columns:1fr}}
+.close{overflow:hidden; position:relative}
+.close img{width:100%; height:auto; -webkit-mask-image:radial-gradient(ellipse 65% 65% at 60% 50%, #000 55%, transparent 100%); mask-image:radial-gradient(ellipse 65% 65% at 60% 50%, #000 55%, transparent 100%)}
+.contacts{display:grid; gap:6px; margin-top:18px; font-size:17px}
+footer{padding:40px 0 60px; color:var(--muted); font-size:14px}
+</style>
+
+<main class="wrap">
+
+<section class="hero" style="padding-top:56px">
+  <p class="eyebrow">Moshe Agency · Предложение</p>
+  <h1 style="margin-top:18px">Прясно суши на Витоша.<br><span style="color:var(--salmon)">Всеки ден.</span></h1>
+  <p class="lead">Една локация на Витоша 9.<br>Фокус: поръчки, обяд, вечеря.</p>
+  <div class="hero-img"><img src="img/sushi1.png" alt="Суши на тъмнозелен фон"></div>
+  <div class="hero-meta">
+    <span><b>Срок:</b> 90 дни, с месечна поддръжка</span>
+    <span><b>Валидност:</b> 14 дни</span>
+    <span><b>Цени:</b> без ДДС</span>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Какво виждаме</p>
+  <h2>Марка с 9 години зад гърба си</h2>
+  <p class="lead">Sushi Point е основана през 2016 г. Продуктът е готов, мрежата е там, където хората минават. Липсва последователна история.</p>
+  <div class="facts">
+    <div class="fact"><div class="num">16</div><small>точки: 9 в София, 4 в Пловдив, по една в Банкя, Елин Пелин и Ботевград</small></div>
+    <div class="fact"><div class="num">2016</div><small>година на основаване. „EST 2016“ е на логото</small></div>
+    <div class="fact"><div class="num">2 472</div><small>последователи в Instagram, 98 публикации</small></div>
+    <div class="fact"><div class="num">11–22</div><small>часа работа на Витоша 9, всеки ден</small></div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Анализ</p>
+  <h2>Какво работи и какво ни липсва</h2>
+  <div class="split">
+    <div class="card">
+      <h3>Какво работи</h3>
+      <ul class="clean">
+        <li>Продуктът: свежо суши, поке и нудли, приготвени на място.</li>
+        <li>Мрежата: точки там, където хората работят и пазаруват.</li>
+        <li>Посланието „Прясно суши всеки ден“ е кратко и се запомня.</li>
+        <li>Двама суши шефове са показани на сайта. Това носи доверие.</li>
+        <li>Оценка 4,6 от 33 отзива в Takeaway. Добър старт.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Какво ни липсва</h3>
+      <ul class="clean miss">
+        <li>Сайтът казва „НОВОТО СУШИ В СОФИЯ“, Instagram – „НОВА ЛОКАЦИЯ“. Две истории за една новина.</li>
+        <li>Отзивите не се виждат на сайта, а рейтингът не се използва в рекламата.</li>
+        <li>Във Instagram продуктът е по-малко видим от текста. Рубриките не са ясни.</li>
+        <li>Няма онлайн поръчка на сайта. Поръчката минава през платформи и телефон.</li>
+        <li>Нямаме продажби по точка, затова не знаем кой обект работи най-добре.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Аудитории</p>
+  <h2>Четири типа хора, четири причини</h2>
+  <p class="lead">Една реклама няма да върши работа за всички. Всеки тип човек търси различно.</p>
+  <div class="aud">
+    <div class="card"><p class="role">Купува на място</p><h3 style="margin-top:12px">Офис хора в центъра</h3><p class="muted" style="margin-top:10px">25–45 години, работят около Витоша. Търсят бърз обяд, който да вземат или да изядат на втория етаж.</p></div>
+    <div class="card"><p class="role">Минава и се отбива</p><h3 style="margin-top:12px">Пешеходци и туристи</h3><p class="muted" style="margin-top:10px">Виждат точката от улицата. Импулсивна покупка, ако изглежда свежо и е на крачка.</p></div>
+    <div class="card"><p class="role">Поръчва от вкъщи</p><h3 style="margin-top:12px">Доставка през платформи</h3><p class="muted" style="margin-top:10px">Млади и двойки вечер. Отварят Wolt, Glovo или Bolt Food и търсят сет, който да споделят.</p></div>
+    <div class="card"><p class="role">Връща се</p><h3 style="margin-top:12px">Редовни клиенти</h3><p class="muted" style="margin-top:10px">Имат любим сет и любим обект. Нужна им е причина да се върнат: нов сет, сезонна новост.</p></div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Фунията</p>
+  <h2>От видимост до втора поръчка</h2>
+  <p class="lead">Всяка стъпка има своя мярка. Бюджетът се насочва към етапа, който в момента губи най-много хора.</p>
+  <div class="funnel">
+    <div class="stage"><h3>Видимост</h3><div class="bar"><i style="width:100%"></i></div><span class="what">Reels, Meta, Google Maps</span></div>
+    <div class="stage"><h3>Интерес</h3><div class="bar"><i style="width:78%"></i></div><span class="what">Меню, снимки, рубрики</span></div>
+    <div class="stage"><h3>Посещение / поръчка</h3><div class="bar"><i style="width:52%"></i></div><span class="what">Адрес, телефон, платформа</span></div>
+    <div class="stage"><h3>Втора покупка</h3><div class="bar"><i style="width:30%"></i></div><span class="what">Комбо, любим обект, Sushi of the Week</span></div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Реклама</p>
+  <h2>1 300 € на месец, разпределени по канал</h2>
+  <p class="lead">Рекламата е отделна от месечната такса. Плаща се директно към платформите.</p>
+  <div class="chan">
+    <div class="chan-row"><span><b>Meta Ads</b><br><span class="muted" style="font-size:14px">Facebook, Instagram</span></span><div class="track"><i style="width:61%"></i></div><span class="amt">800 €</span></div>
+    <div class="chan-row"><span><b>Google Ads</b><br><span class="muted" style="font-size:14px">Търсене в близост</span></span><div class="track"><i style="width:39%"></i></div><span class="amt">500 €</span></div>
+    <div class="chan-row"><span><b>Wolt · Glovo · Bolt Food</b><br><span class="muted" style="font-size:14px">Платено позициониране</span></span><div class="track" style="border-style:dashed"></div><span class="amt muted" style="font-size:15px">отделно</span></div>
+  </div>
+  <p class="note">Бюджетът се пренасочва всеки месец към работещите реклами. Без постоянни процентни отстъпки.</p>
+</section>
+
+<section>
+  <p class="eyebrow">Послания и комбота</p>
+  <h2>Какво казваме, какво продаваме</h2>
+  <div class="split">
+    <div class="card">
+      <h3>Послания</h3>
+      <ul class="clean">
+        <li><b>Your lunch point.</b> Бърз и удобен обяд.</li>
+        <li><b>Take away or eat upstairs.</b> Вземи или седни на втория етаж.</li>
+        <li><b>Fresh sushi. Right in the city.</b> Свежест и централна локация.</li>
+        <li><b>More than sushi.</b> Поке, нудли и топла храна.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Комбо предложения</h3>
+      <ul class="clean">
+        <li>Sushi Lunch Combo</li>
+        <li>Poke + Drink</li>
+        <li>Noodles + Dessert</li>
+        <li>Sushi for Two</li>
+        <li>Sushi of the Week</li>
+      </ul>
+      <p class="muted" style="margin-top:14px;font-size:14px">Цените се определят според себестойността и маржа. Не разчитаме на постоянни отстъпки.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Съдържание</p>
+  <h2>Три идеи за сторибордове</h2>
+  <p class="lead">Концепциите показват посоката. Финалните ще снимаме на Витоша 9 с истинските продукти.</p>
+  <div class="concepts">
+    <div class="concept">
+      <span class="tag">Reels · 30 сек.</span>
+      <h3>Приготвено пред теб</h3>
+      <p class="muted">Продуктът от първия кадър до витрината. Без текст, само звук от кухнята.</p>
+    </div>
+    <div class="concept">
+      <span class="tag">Серия · 15 сек.</span>
+      <h3>Обед в 12:00</h3>
+      <p class="muted">Офис хора се отбиват по пътя. Една кратка сцена на сутрин, един сет на обяд.</p>
+    </div>
+    <div class="concept">
+      <span class="tag">UGC · Stories</span>
+      <h3>Моята точка</h3>
+      <p class="muted">Клиенти показват любимия си обект и сет. Истински хора, без постановка.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">План</p>
+  <h2>Първите 90 дни</h2>
+  <div class="plan">
+    <div class="card"><p class="eyebrow">Месец 1 · Тест</p><h3 style="margin-top:12px">Настройка и тест</h3><p class="muted" style="margin-top:10px">Едно име в Instagram, Facebook и Google. Meta и Google кампании за Витоша 9. Тест на послания и формати.</p></div>
+    <div class="card"><p class="eyebrow">Месец 2 · Оптимизация</p><h3 style="margin-top:12px">Към работещото</h3><p class="muted" style="margin-top:10px">Бюджетът отива към най-добрите реклами. Тест на комба и ремаркетинг към посетители.</p></div>
+    <div class="card"><p class="eyebrow">Месец 3 · Мащаб</p><h3 style="margin-top:12px">Разширяване</h3><p class="muted" style="margin-top:10px">Повече бюджет за каналите с доказан резултат. Подготовка за други локации и за Sushi Points.</p></div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Дигитален екран · Витоша 9</p>
+  <h2>Пет концепции за екрана на улицата</h2>
+  <p class="lead">Чете се за 2–3 секунди, без звук, на дневна светлина. Текстът е на български и английски, цените и продуктите се сменят лесно.</p>
+  <div class="split">
+    <div class="card">
+      <h3>Какво включва заданието</h3>
+      <ul class="clean">
+        <li>5 статични визии: Sushi, Poke, Hot Noodles, Lunch Deals, Take Away / Eat Upstairs</li>
+        <li>4 плейлиста според часовете на деня</li>
+        <li>Редактируеми изходни файлове във финалната резолюция и ориентация на екрана</li>
+        <li>Тестов вариант за четимост от реално пешеходно разстояние</li>
+        <li>Видео версии само ако са допустими за екрана</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Референции</h3>
+      <ul class="clean">
+        <li><b>YO Sushi, EAT Happy, Sushi Daily, ITSU</b></li>
+        <li><b>Wasabi, Sushi Circle, Sushi Gourmet</b></li>
+        <li><b>Blue Taste, Honu, Aloha Poke</b></li>
+      </ul>
+      <p class="muted" style="margin-top:14px;font-size:14px">Вдъхновение по конкретни елементи: продуктова фотография, UGC reels, витрини и промоции. Без копиране на чужда идентичност.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Пакети</p>
+  <h2>Три варианта за работа</h2>
+  <p class="lead">Месечна такса. Рекламният бюджет (1 300 € в примера) е отделен.</p>
+  <div class="pkgs">
+    <div class="card pkg">
+      <h3>Старт</h3>
+      <p class="muted">Визия и основно съдържание за Витоша 9.</p>
+      <div class="price">1 200 €</div><p class="per">на месец, без ДДС</p>
+      <ul>
+        <li>Визуална система и шаблони</li>
+        <li>3 публикации и 2 Reels във Facebook и Instagram</li>
+        <li>Stories 5–6 седмично</li>
+        <li>1 снимачен ден на обекта</li>
+        <li>Google профил и отговори на коментари</li>
+        <li>Месечен план и отчет</li>
+      </ul>
+    </div>
+    <div class="card pkg hot">
+      <p class="eyebrow" style="color:#141414">Най-избиран</p>
+      <h3>Растеж</h3>
+      <p class="muted">Дигитален екран и реклама около Витоша 9.</p>
+      <div class="price">1 800 €</div><p class="per">на месец, без ДДС</p>
+      <ul>
+        <li>Всичко от Старт</li>
+        <li>4 публикации и 4 Reels във Facebook и Instagram</li>
+        <li>Дигитален екран: 5 рекламни концепции</li>
+        <li>Meta Ads около Витоша 9</li>
+        <li>2 видеа „Приготвено пред теб“</li>
+      </ul>
+    </div>
+    <div class="card pkg">
+      <h3>Доминация</h3>
+      <p class="muted">Пълно управление и оферти в платформите.</p>
+      <div class="price">2 400 €</div><p class="per">на месец, без ДДС</p>
+      <ul>
+        <li>Всичко от Растеж</li>
+        <li>6 публикации и 6 Reels във Facebook и Instagram</li>
+        <li>2 снимачни дни на месец</li>
+        <li>2 Meta кампании и месечен Giveaway</li>
+        <li>Оферти в Glovo, Wolt и Bolt Food</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note">Дигитален екран по пълното задание (5 концепции, 4 плейлиста, файлове, тест на четимостта): [сума] € еднократно, извън пакетите.</p>
+  <p class="note">Цените са ориентир и се потвърждават на срещата. Офертата е валидна 14 дни.</p>
+</section>
+
+<section>
+  <div class="close">
+    <div>
+      <p class="eyebrow">Следваща стъпка</p>
+      <h2 style="font-size:clamp(28px,3.8vw,44px)">Среща за одобрение</h2>
+      <p class="lead">Обсъждаме обхвата, цените и датата на заснемането на Витоша 9.</p>
+      <div class="contacts">
+        <span>sushipoint.bg</span>
+        <span>@sushipointbg</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="wrap">Moshe Agency · Оферта за Sushi Point</footer>
